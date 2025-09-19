@@ -3,13 +3,14 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { CartProvider } from '@/context/CartContext';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Stripe Shop - Secure E-commerce',
-  description: 'A modern e-commerce shop with secure Stripe payments',
-  keywords: 'ecommerce, shop, stripe, payments, products',
+  title: 'GrafixMood.co.uk | Premium Car Stickers & Auto Accessories – UK Delivery',
+  description: 'GrafixMood.co.uk is your UK destination for premium car stickers and custom auto accessories. Bold designs. Fast delivery. Easy online shopping.',
+  keywords: 'car stickers, auto accessories, vehicle decals, car graphics, UK, GrafixMood, automotive, car styling, custom accessories',
 };
 
 export default function RootLayout({
@@ -22,7 +23,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <CartProvider>
           <Header />
-          {children}
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
         </CartProvider>
       </body>
     </html>

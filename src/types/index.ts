@@ -17,6 +17,18 @@ export interface Product {
   isVariable?: boolean; // New field to indicate if product has variants
   variants?: ProductVariant[]; // Available variants for variable products
   allowsCustomization?: boolean; // New field for products that allow text customization
+  specifications?: {
+    material?: string;
+    size?: string;
+    color?: string;
+    features?: string[];
+    designStyle?: string;
+    patterns?: string;
+    function?: string;
+    packaging?: string;
+    fitment?: string;
+  };
+  detailedDescription?: string;
 }
 
 export interface CartItem {

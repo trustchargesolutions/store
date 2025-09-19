@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { Product, ProductVariant } from '@/types';
 import { formatPrice } from '@/lib/utils';
 import { useCart } from '@/context/CartContext';
+import ProductDetailsDialog from './ProductDetailsDialog';
+import { Eye } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -16,6 +18,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     product.isVariable && product.variants ? product.variants[0] : null
   );
   const [customText, setCustomText] = useState<string>('');
+  const [showDetailsDialog, setShowDetailsDialog] = useState<boolean>(false);
 
   const handleAddToCart = () => {
     if (product.isVariable && selectedVariant) {
@@ -39,12 +42,6 @@ export default function ProductCard({ product }: ProductCardProps) {
     return null;
   };
 
-  const getProductDisplayName = () => {
-    if (product.allowsCustomization && customText.trim()) {
-      return customText.trim(); // Use only the custom text as the product name
-    }
-    return product.name;
-  };
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
@@ -132,25 +129,43 @@ export default function ProductCard({ product }: ProductCardProps) {
             <span className="text-sm text-gray-500">
               Stock: {product.stock}
             </span>
-            <button
-              onClick={handleAddToCart}
-              disabled={product.stock === 0 || (product.allowsCustomization && !customText.trim())}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                product.stock > 0 && (!product.allowsCustomization || customText.trim())
-                  ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-              }`}
-            >
-              {product.stock === 0 
-                ? 'Out of Stock' 
-                : (product.allowsCustomization && !customText.trim())
-                  ? 'Enter Product Name'
-                  : 'Add to Cart'
-              }
-            </button>
           </div>
         </div>
+
+        {/* Action Buttons */}
+        <div className="flex gap-2 mt-4">
+          <button
+            onClick={() => setShowDetailsDialog(true)}
+            className="flex-1 px-3 py-2 rounded-md text-sm font-medium border border-gray-300 hover:bg-gray-50 transition-colors flex items-center justify-center gap-1"
+          >
+            <Eye className="w-4 h-4" />
+            View Details
+          </button>
+          <button
+            onClick={handleAddToCart}
+            disabled={product.stock === 0 || (product.allowsCustomization && !customText.trim())}
+            className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              product.stock > 0 && (!product.allowsCustomization || customText.trim())
+                ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            }`}
+          >
+            {product.stock === 0 
+              ? 'Out of Stock' 
+              : (product.allowsCustomization && !customText.trim())
+                ? 'Enter Product Name'
+                : 'Add to Cart'
+            }
+          </button>
+        </div>
       </div>
+
+      {/* Product Details Dialog */}
+      <ProductDetailsDialog
+        product={product}
+        isOpen={showDetailsDialog}
+        onClose={() => setShowDetailsDialog(false)}
+      />
     </div>
   );
 }

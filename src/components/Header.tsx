@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import Cart from './Cart';
 
@@ -13,21 +14,26 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-900">
-                Grafix Mood Store
-              </h1>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900">
+                  GrafixMood.co.uk
+                </h1>
+                <p className="text-sm text-gray-600 hidden sm:block">
+                  Drive your style. Stick with quality.
+                </p>
+              </div>
             </div>
             
             <nav className="hidden md:flex space-x-6">
-              <a href="#" className="text-gray-700 hover:text-gray-900">
+              <Link href="/" className="text-gray-700 hover:text-gray-900">
                 Home
-              </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900">
-                Products
-              </a>
-              <a href="#" className="text-gray-700 hover:text-gray-900">
-                About
-              </a>
+              </Link>
+              <Link href="/contact" className="text-gray-700 hover:text-gray-900">
+                Contact
+              </Link>
+              <Link href="/returns-refunds" className="text-gray-700 hover:text-gray-900">
+                Returns
+              </Link>
             </nav>
 
             <div className="flex items-center space-x-4">
