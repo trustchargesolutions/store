@@ -43,17 +43,28 @@ export default function Cart({ cartItemsCount }: CartProps) {
         }),
       });
 
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to create checkout session');
+      }
+
       const { sessionId } = await response.json();
+      
+      if (!sessionId) {
+        throw new Error('No session ID received from checkout API');
+      }
       
       const stripe = await stripePromise;
       if (stripe) {
         const { error } = await stripe.redirectToCheckout({ sessionId });
         if (error) {
           console.error('Stripe checkout error:', error);
+          alert('There was an error redirecting to checkout. Please try again.');
         }
       }
     } catch (error) {
       console.error('Checkout error:', error);
+      alert('There was an error processing your checkout. Please try again.');
     } finally {
       setIsLoading(false);
     }

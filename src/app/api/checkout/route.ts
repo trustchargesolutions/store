@@ -11,12 +11,24 @@ interface CheckoutItem {
 
 export async function POST(request: NextRequest) {
   try {
+    // Debug: Log the last 4 characters of the secret key to verify it's loaded correctly
+    console.log('Using Stripe secret key ending in:', process.env.STRIPE_SECRET_KEY?.slice(-4));
+    
     const { items }: { items: CheckoutItem[] } = await request.json();
 
     if (!items || items.length === 0) {
       return NextResponse.json(
         { error: 'No items provided' },
         { status: 400 }
+      );
+    }
+
+    // Check if Stripe is properly configured
+    if (!stripe) {
+      console.error('Stripe is not configured properly');
+      return NextResponse.json(
+        { error: 'Payment system not configured' },
+        { status: 500 }
       );
     }
 
@@ -83,6 +95,18 @@ export async function POST(request: NextRequest) {
     
   } catch (error) {
     console.error('Error creating checkout session:', error);
+    
+    // Handle specific Stripe errors
+    if (error && typeof error === 'object' && 'type' in error) {
+      const stripeError = error as any;
+      if (stripeError.type === 'StripeAuthenticationError') {
+        return NextResponse.json(
+          { error: 'Payment system authentication failed. Please contact support.' },
+          { status: 500 }
+        );
+      }
+    }
+    
     return NextResponse.json(
       { error: 'Error creating checkout session' },
       { status: 500 }
