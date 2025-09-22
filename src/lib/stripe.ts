@@ -8,7 +8,7 @@ export const stripePromise = loadStripe(
 
 // Server-side Stripe (only create on server)
 export const stripe = typeof window === 'undefined' 
-  ? new Stripe("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", {
+  ? new Stripe("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", {
       apiVersion: '2024-06-20',
     })
   : null;
