@@ -8,8 +8,8 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'GrafixMood.co.uk | Premium Car Stickers & Auto Accessories – UK Delivery',
-  description: 'GrafixMood.co.uk is your UK destination for premium car stickers and custom auto accessories. Bold designs. Fast delivery. Easy online shopping.',
+  title: 'GrafixMood.com | Premium Car Stickers & Auto Accessories – UK Delivery',
+  description: 'GrafixMood.com is your UK destination for premium car stickers and custom auto accessories. Bold designs. Fast delivery. Easy online shopping.',
   keywords: 'car stickers, auto accessories, vehicle decals, car graphics, UK, GrafixMood, automotive, car styling, custom accessories',
 };
 

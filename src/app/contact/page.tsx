@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - GrafixMood.co.uk | Car Stickers UK',
-  description: 'Contact GrafixMood.co.uk for questions about car stickers, orders, shipping, and returns. Reach us via email for quick support.',
+  title: 'Contact Us - GrafixMood.com | Car Stickers UK',
+  description: 'Contact GrafixMood.com for questions about car stickers, orders, shipping, and returns. Reach us via email for quick support.',
   keywords: 'contact us, customer support, car stickers, auto accessories, UK, GrafixMood, help, support',
 };
 
@@ -27,7 +27,7 @@ export default function Contact() {
                   <h2 className="text-xl font-semibold text-blue-900">Email Support</h2>
                 </div>
                 <p className="text-blue-800 text-lg mb-2">
-                  <strong>Email:</strong> <a href="mailto:contact@grafixmood.co.uk" className="text-blue-600 hover:text-blue-800 underline font-medium">contact@grafixmood.co.uk</a>
+                  <strong>Email:</strong> <a href="mailto:contact@GrafixMood.com" className="text-blue-600 hover:text-blue-800 underline font-medium">contact@GrafixMood.com</a>
                 </p>
                 <p className="text-blue-700">
                   We aim to respond within <strong>24 hours</strong> on business days.

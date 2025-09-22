@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Terms and Conditions - GrafixMood.co.uk | Car Stickers Online Store UK',
-  description: 'Read the Terms and Conditions for shopping at GrafixMood.co.uk, your UK online store for premium car stickers and auto accessories. Clear policies on orders, shipping, returns, and payments.',
+  title: 'Terms and Conditions - GrafixMood.com | Car Stickers Online Store UK',
+  description: 'Read the Terms and Conditions for shopping at GrafixMood.com, your UK online store for premium car stickers and auto accessories. Clear policies on orders, shipping, returns, and payments.',
   keywords: 'terms and conditions, car stickers, auto accessories, UK, GrafixMood, online store, shipping policy, returns policy',
 };
 
@@ -15,7 +15,7 @@ export default function TermsAndConditions() {
           <h1 className="text-3xl font-bold text-gray-900 mb-6">Terms and Conditions</h1>
           <p className="text-gray-600 mb-8">Last updated: 01.08.2025</p>
           <p className="text-gray-700 mb-8">
-            Welcome to GrafixMood.co.uk. Please read these Terms and Conditions carefully before using our online store.
+            Welcome to GrafixMood.com. Please read these Terms and Conditions carefully before using our online store.
           </p>
 
           <div className="space-y-8">
@@ -25,8 +25,8 @@ export default function TermsAndConditions() {
                 This website is operated by GrafixMood. We specialise in selling car stickers and auto accessories via dropshipping.
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Website: www.grafixmood.co.uk</li>
-                <li>Email: contact@grafixmood.co.uk</li>
+                <li>Website: www.GrafixMood.com</li>
+                <li>Email: contact@GrafixMood.com</li>
                 <li>Business location: UK-based online-only store</li>
               </ul>
             </section>
@@ -42,7 +42,7 @@ export default function TermsAndConditions() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Products</h2>
               <p className="text-gray-700 mb-4">
-                All products sold on GrafixMood.co.uk are sourced from third-party suppliers. Images are for illustrative purposes only and slight variations may occur.
+                All products sold on GrafixMood.com are sourced from third-party suppliers. Images are for illustrative purposes only and slight variations may occur.
               </p>
               <p className="text-gray-700">
                 All products are brand new and shipped directly from our suppliers. Delivery time typically ranges from 1 to 21 business days.
@@ -72,7 +72,7 @@ export default function TermsAndConditions() {
                 You may request a return or refund within 14 days of receiving your item, provided the item is unused and in its original packaging.
               </p>
               <p className="text-gray-700 mb-4">
-                To request a return, please email us at: <a href="mailto:contact@grafixmood.co.uk" className="text-blue-600 hover:text-blue-800 underline">contact@grafixmood.co.uk</a>
+                To request a return, please email us at: <a href="mailto:contact@GrafixMood.com" className="text-blue-600 hover:text-blue-800 underline">contact@GrafixMood.com</a>
               </p>
               <p className="text-gray-700">
                 Please note: As we work with external suppliers, return addresses may vary and return postage is the buyer's responsibility.

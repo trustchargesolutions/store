@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - GrafixMood.co.uk | Car Stickers UK',
-  description: 'Privacy Policy for GrafixMood.co.uk, your UK online store for car stickers and auto accessories. How we collect, use, and protect your data in compliance with UK GDPR.',
+  title: 'Privacy Policy - GrafixMood.com | Car Stickers UK',
+  description: 'Privacy Policy for GrafixMood.com, your UK online store for car stickers and auto accessories. How we collect, use, and protect your data in compliance with UK GDPR.',
   keywords: 'privacy policy, data protection, GDPR, car stickers, auto accessories, UK, GrafixMood, personal data',
 };
 
@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700">
-                At GrafixMood.co.uk, we value your privacy. This Privacy Policy explains how we collect, use, and protect your personal information in accordance with UK GDPR.
+                At GrafixMood.com, we value your privacy. This Privacy Policy explains how we collect, use, and protect your personal information in accordance with UK GDPR.
               </p>
             </section>
 
@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Your Rights</h2>
               <p className="text-gray-700">
-                You have the right to access, correct, or delete your personal data at any time. For any requests, please contact us at <a href="mailto:contact@grafixmood.co.uk" className="text-blue-600 hover:text-blue-800 underline">contact@grafixmood.co.uk</a>.
+                You have the right to access, correct, or delete your personal data at any time. For any requests, please contact us at <a href="mailto:contact@GrafixMood.com" className="text-blue-600 hover:text-blue-800 underline">contact@GrafixMood.com</a>.
               </p>
             </section>
 
@@ -81,7 +81,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Contact Us</h2>
               <p className="text-gray-700">
-                If you have any questions about this Privacy Policy, please contact us at <a href="mailto:contact@grafixmood.co.uk" className="text-blue-600 hover:text-blue-800 underline">contact@grafixmood.co.uk</a>.
+                If you have any questions about this Privacy Policy, please contact us at <a href="mailto:contact@GrafixMood.com" className="text-blue-600 hover:text-blue-800 underline">contact@GrafixMood.com</a>.
               </p>
             </section>
           </div>

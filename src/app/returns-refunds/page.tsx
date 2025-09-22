@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Return & Refund Policy - GrafixMood.co.uk | Car Stickers UK',
-  description: 'Return and refund policy for GrafixMood.co.uk, your UK online store for car stickers and auto accessories. Clear rules on returns, eligibility, and refunds.',
+  title: 'Return & Refund Policy - GrafixMood.com | Car Stickers UK',
+  description: 'Return and refund policy for GrafixMood.com, your UK online store for car stickers and auto accessories. Clear rules on returns, eligibility, and refunds.',
   keywords: 'return policy, refund policy, car stickers, auto accessories, UK, GrafixMood, returns, refunds',
 };
 
@@ -45,7 +45,7 @@ export default function ReturnsRefunds() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. Return Process</h2>
               <ol className="list-decimal list-inside text-gray-700 space-y-2">
-                <li>Email us at <a href="mailto:contact@grafixmood.co.uk" className="text-blue-600 hover:text-blue-800 underline">contact@grafixmood.co.uk</a> with your order number and reason for return</li>
+                <li>Email us at <a href="mailto:contact@GrafixMood.com" className="text-blue-600 hover:text-blue-800 underline">contact@GrafixMood.com</a> with your order number and reason for return</li>
                 <li>You are responsible for return shipping costs</li>
                 <li>After inspecting the returned product, we will process the refund within 7 working days</li>
               </ol>
@@ -80,7 +80,7 @@ export default function ReturnsRefunds() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Contact Us</h2>
               <p className="text-gray-700">
-                If you have any questions about our return policy, please contact us at <a href="mailto:contact@grafixmood.co.uk" className="text-blue-600 hover:text-blue-800 underline">contact@grafixmood.co.uk</a>.
+                If you have any questions about our return policy, please contact us at <a href="mailto:contact@GrafixMood.com" className="text-blue-600 hover:text-blue-800 underline">contact@GrafixMood.com</a>.
               </p>
             </section>
           </div>

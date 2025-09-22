@@ -16,7 +16,7 @@ export default function Header() {
             <div className="flex items-center">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">
-                  GrafixMood.co.uk
+                  GrafixMood.com
                 </h1>
                 <p className="text-sm text-gray-600 hidden sm:block">
                   Drive your style. Stick with quality.

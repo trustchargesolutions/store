@@ -7,13 +7,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">GrafixMood.co.uk</h3>
+            <h3 className="text-xl font-bold mb-4">GrafixMood.com</h3>
             <p className="text-gray-400 mb-4">
               Your premier destination for high-quality car stickers and auto accessories in the UK. 
               Transform your vehicle with our premium selection of graphics and decals.
             </p>
             <p className="text-gray-400">
-              <strong>Email:</strong> <a href="mailto:contact@grafixmood.co.uk" className="text-blue-400 hover:text-blue-300">contact@grafixmood.co.uk</a>
+              <strong>Email:</strong> <a href="mailto:contact@GrafixMood.com" className="text-blue-400 hover:text-blue-300">contact@GrafixMood.com</a>
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} GrafixMood.co.uk. All rights reserved.
+              © {new Date().getFullYear()} GrafixMood.com. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0">
               UK-based online store specializing in car stickers and auto accessories
